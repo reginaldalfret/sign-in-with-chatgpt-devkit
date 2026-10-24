@@ -16,7 +16,7 @@
     "dev:gallery": "npm run build -w @siwc/react && npm run dev -w @siwc/component-gallery",
     "licenses:generate": "node scripts/generate-third-party-notices.mjs",
     "licenses:check": "node scripts/generate-third-party-notices.mjs --check",
-    "test": "npm run build -w @siwc/local && node --experimental-strip-types --test packages/local/test/*.test.mjs examples/paste-perfect/test/*.test.mjs"
+    "test": "npm run build -w @siwc/local && npm run build -w @siwc/react && node --experimental-strip-types --test packages/local/test/*.test.mjs packages/react/test/*.test.mjs examples/paste-perfect/test/*.test.mjs"
   },
   "devDependencies": {
     "@types/node": "^24.0.0",

@@ -17,7 +17,7 @@ export const ContinueWithChatGPTButton = forwardRef<HTMLButtonElement, ContinueW
     return (
       <button {...props} ref={ref} type={type} className={classes('siwc', 'siwc-continue', `siwc-continue--${color}`, className)} disabled={disabled || loading} aria-busy={loading || undefined}>
         <ChatGPTMark src={logoSrc} kind={color === 'black' ? 'button-white' : 'button-black'} />
-        <span>{loading ? 'Opening ChatGPT…' : label === 'sign-in' ? 'Sign-in with ChatGPT' : 'Continue with ChatGPT'}</span>
+        <span>{loading ? 'Opening ChatGPT…' : label === 'sign-in' ? 'Sign in with ChatGPT' : 'Continue with ChatGPT'}</span>
       </button>
     );
   },

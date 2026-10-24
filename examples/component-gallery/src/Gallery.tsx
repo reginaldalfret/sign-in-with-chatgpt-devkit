@@ -72,8 +72,8 @@ function ButtonGallery({ action, references }: { action: Action; references: boo
   return <>
     <div className="specimen-grid specimen-grid--buttons">
       {(['continue', 'sign-in'] as const).flatMap((label) => (['black', 'white'] as const).map((appearance) =>
-        <Specimen key={`${label}-${appearance}`} title={`${label === 'continue' ? 'Continue' : 'Sign-in'} · ${appearance}`} detail="242 × 45 · radius 12 · mark 21">
-          <ContinueWithChatGPTButton label={label} appearance={appearance} onClick={() => action(`${label === 'continue' ? 'Continue' : 'Sign-in'} with ChatGPT · ${appearance}`)} />
+        <Specimen key={`${label}-${appearance}`} title={`${label === 'continue' ? 'Continue' : 'Sign in'} · ${appearance}`} detail="242 × 45 · radius 12 · mark 21">
+          <ContinueWithChatGPTButton label={label} appearance={appearance} onClick={() => action(`${label === 'continue' ? 'Continue' : 'Sign in'} with ChatGPT · ${appearance}`)} />
         </Specimen>,
       ))}
     </div>
@@ -81,7 +81,7 @@ function ButtonGallery({ action, references }: { action: Action; references: boo
       <div className="button-state-grid">
         {(['continue', 'sign-in'] as const).flatMap((label) => (['black', 'white'] as const).map((appearance) =>
           <div className="button-state" key={`${label}-${appearance}`}>
-            <span>{label === 'continue' ? 'Continue' : 'Sign-in'} · {appearance}</span>
+            <span>{label === 'continue' ? 'Continue' : 'Sign in'} · {appearance}</span>
             <ContinueWithChatGPTButton label={label} appearance={appearance} loading />
             <ContinueWithChatGPTButton label={label} appearance={appearance} disabled />
           </div>,
